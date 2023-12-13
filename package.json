@@ -17,7 +17,7 @@
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [
-      "yarn format"
+      "yarn prettier:fix && yarn lint:fix && yarn compile"
     ],
     "**/*.{scss,html}": [
       "prettier --write"

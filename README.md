@@ -17,13 +17,13 @@ If you are developing a production application, we recommend updating the config
 
 ```js
 export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
+    // other rules...
+    parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        project: ['./tsconfig.json', './tsconfig.node.json'],
+        tsconfigRootDir: __dirname,
+    },
 }
 ```
 
@@ -37,24 +37,25 @@ export default {
 
 1. Create vite app
 
-   - yarn create vite ./name_app
-   - yarn install
+    - yarn create vite ./name_app
+    - yarn install
 
 2. Install eslint
 
-   - npm init @eslint/config
-   - npm install eslint-plugin-react --save-dev
-   - add include: ["src", "vite.config.ts"] (file tsconfig.json)
-   - add options into settings, parserOptions, rules (file .eslintrc.cjs)
+    - npm init @eslint/config
+    - npm install eslint-plugin-react --save-dev
+    - add include: ["src", "vite.config.ts"] (file tsconfig.json)
+    - add options into settings, parserOptions, rules (file .eslintrc.cjs)
 
 3. Install prettier
 
-   - npm install prettier eslint-config-prettier eslint-plugin-prettier --save-dev
-   - add options into extends: 'plugin:react/recommended', 'plugin:prettier/recommended' and plugins: ['prettier']
+    - npm install prettier eslint-config-prettier eslint-plugin-prettier --save-dev
+    - add options into extends: 'plugin:react/recommended', 'plugin:prettier/recommended' and plugins: ['prettier']
 
 4. Install husky
 
-   - npx husky-init && npm install
+    - npx husky-init && npm install
+    - npx husky set .husky/pre-commit "yarn lint-staged"
 
 5. Install lint-staged
-   - npm i add lint-staged
+    - npm i add lint-staged
